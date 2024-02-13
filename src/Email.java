@@ -14,17 +14,17 @@ class Email {
     Email(String firstName, String lastName){
 
         email = setEmail(firstName, lastName);
-        System.out.println(getEmail());
+        System.out.println("Your email address is: " + getEmail());
         password = setPassword();
-        System.out.println(getPassword());
+        System.out.println("Your password is: " + getPassword());
     }
 
     private String setEmail(String firstName, String lastName){
         return (firstName + "." + lastName + "@department.company.com").toLowerCase();
     }
-    private String getEmail()
+    public String getEmail()
     {
-        return "Your assigned email is: " + email;
+        return email;
     }
 
     private String setPassword(){
@@ -40,8 +40,8 @@ class Email {
         return password;
     }
 
-    private String getPassword(){
-        return "Your password is: " + password;
+    public String getPassword(){
+        return password;
     }
 
 }
