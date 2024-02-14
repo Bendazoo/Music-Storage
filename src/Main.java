@@ -10,12 +10,9 @@ public class Main {
         String lastName = scanner.nextLine();
         Email userAccount = new Email(firstName, lastName);
 
-        String x = userAccount.getEmail();
-        String y = userAccount.getPassword();
 
         System.out.println("\n--------------------------------------------\n");
         System.out.println("Please Enter Creditionals to Login:\n");
-
 
         boolean exit = true;
         do{
@@ -30,7 +27,6 @@ public class Main {
 
                 } else {
                     System.out.println("Login Invalid.\n");
-
 
                 }
         }while(exit);

@@ -3,11 +3,10 @@ import java.util.Random;
 
 class Email {
     Random random = new Random();
-    private String firstName;
-    private String lastName;
+
     private String email;
     private String password = "";
-    final private String[] chars = {"1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+    final private String[] CHARS = {"1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
 
 
 
@@ -32,7 +31,7 @@ class Email {
         int length = 0;
         do{
             index = random.nextInt(36);
-            password += chars[index];
+            password += CHARS[index];
             length++;
 
         }while(length != 10);
