@@ -4,6 +4,9 @@ public class Main {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
+        Rap raplib = new Rap();
+        Soul soullib = new Soul();
+
         System.out.println("Please enter a first name: ");
         String firstName = scanner.nextLine();
         System.out.println("Please enter a last name: ");
@@ -23,6 +26,7 @@ public class Main {
                 if(emailEntry.equals(userAccount.getEmail()) && passwordEntry.equals(userAccount.getPassword()))
                 {
                     System.out.println("Login Succesful!");
+                    System.out.println("\n--------------------------------------------\n");
                     exit = false;
                 } else {
                     System.out.println("Login Invalid.\n");
@@ -31,6 +35,8 @@ public class Main {
         }while(exit);
 
         int userOption;
+        String songname;
+        String artist;
         do{
             exit = true;
             System.out.println("Enter the option you would like. ");
@@ -47,18 +53,27 @@ public class Main {
                 System.out.println("                Back: 3");
                 userOption = scanner.nextInt();
                 if(userOption ==1){
-                    System.out.println("Welcome to rap");
+                    scanner.nextLine();
+                    System.out.println("Song Name: ");
+                    songname = scanner.nextLine();
+                    System.out.println("Artist Name:");
+                    artist = scanner.nextLine();
+                    raplib.addmusic(songname, artist);
                 } else if(userOption ==2){
-                    System.out.println("Welcome to R&b");
+                    scanner.nextLine();
+                    System.out.println("Song Name: ");
+                    songname = scanner.nextLine();
+                    System.out.println("Artist Name:");
+                    artist = scanner.nextLine();
+                    soullib.addmusic(songname, artist);
                 }else if(userOption ==3){
                     continue;
                 }
 
-
             }else if(userOption == 2){
-
+                raplib.getmusic();
             }else if(userOption == 3){
-
+                soullib.getmusic();
             } else if(userOption ==4){
                 exit = false;
                 System.out.println("Thank you for using my app.");
